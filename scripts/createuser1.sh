@@ -31,5 +31,22 @@ echo "you must be root user"
 exit
 fi
 
+#unit4(a)
+/usr/bin/passwd=passwd -e
+/usr/bin/id $MYUSER
+if [ $? -eq 0 ];then
+echo "the user $MYUSER is already present,not doing anything"
+exit
+fi
+
+#unit4(b)
+/sbin/useradd $MYUSER
+echo $MYPASS | /usr/bin/passwd --stdin $MYUSER
+
+#unit5
+passwd -e $MYUSER
+#unit6
+echo "added new user $MYUSER sucessfully"
+
 
 
