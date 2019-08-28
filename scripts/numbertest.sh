@@ -10,12 +10,12 @@ PER=$1
 NAME=$2
 
 if [ $PER -gt 65 ];then
-echo 'Student Result:First Division'
+echo 'Student '$2' Result:First Division'
 elif [ $PER -gt 55 ];then
-echo 'Student Result:Second Division'
+echo 'Student '$2' Result:Second Division'
 elif [ $PER -gt 45 ];then 
-echo 'Student Result:Third Division'
+echo 'Student '$2' Result:Third Division'
 else
-echo  'Student Result:Failed....'
+echo  'Student '$2' Result:Failed....'
 
 fi
